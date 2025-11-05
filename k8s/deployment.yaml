@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yourdisc-deployment
+  labels:
+    app: yourdisc-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yourdisc-api
+  template:
+    metadata:
+      labels:
+        app: yourdisc-api
+    spec:
+      containers:
+      - name: yourdisc-api
+        image: igoor1/your-disc:latest
+        ports:
+        - containerPort: 8000

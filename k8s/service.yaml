@@ -1,0 +1,14 @@
+appVersion: apps/v1
+kind: Service
+metadata:
+  name: yourdisc-service
+  labels:
+    app: yourdisc-api
+spec:
+  type: ClusterIP
+  selector:
+    app: yourdisc-api
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8000
