@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: yourdisc-api
-        image: igoor1/your-disc:v8
+        image: igoor1/your-disc:v9
         ports:
         - containerPort: 8000
